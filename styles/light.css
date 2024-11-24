@@ -3,10 +3,57 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-light {
+  --accent-color:#FF8DCB;
+  --hover-color:#353430;
+  --shadow-color:#ff0070;
+  --background-cover-image: url(../images/cover-image-light.png);
+  --title-color: #FFC2E6;
+  
+  --main-color:#353430;
+  --main-font:'IBM Plex Mono', sans-serif;
+  --main-text-size:18px;
+  --second-color: #353430;
+  --main-title-color:#353430;
+  --rec-visibility:hidden;
+  
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color:#FF8DCB;
+  --shadow-color:#ff0070;
+  --background-cover-image: url(../images/cover-image-light.png);
+  --title-color: #FFC2E6;
+  --hover-color:rgba(50, 49, 45, 0.4);
+  --main-color:#353430;
+  --main-font:'IBM Plex Mono', sans-serif;
+  --main-text-size:18px;
+  --second-color: #353430;
+  --main-title-color: #353430;
+  --rec-visibility:hidden;
+  --shadow-link-color:#FF8DCB;
+  --header-button-color:#353430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color:#FF8DCB;
+    --shadow-color:#ff0070;
+    --background-cover-image: url(../images/cover-image-light.png);
+    --title-color: #FFC2E6;
+    --hover-color:rgba(50, 49, 45, 0.4);
+    --main-color:#353430;
+    --main-font:'IBM Plex Mono', sans-serif;
+    --main-text-size:18px;
+    --second-color: #353430;
+    --main-title-color: #353430;
+    --rec-visibility:hidden;
+    --shadow-link-color:#FF8DCB;
+    --header-button-color:#353430;
+  }
+  
 }
