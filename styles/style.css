@@ -275,6 +275,7 @@
 
   .header_title {
     justify-self: start;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .gallery_list_item {
     max-width: 100%;
@@ -320,9 +321,6 @@
   }
   .main {
     gap: 80px;
-  }
-  .header_title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
