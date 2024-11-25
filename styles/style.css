@@ -2,7 +2,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: var(--background-cover-image);
+  background-image: var(
+    --background-cover-image,
+    url(../images/cover-image-dark.png)
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +29,7 @@
   color: var(--title-color);
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--shadow-color);
-  justify-self: center;
+  justify-self: start;
   align-self: center;
 }
 
@@ -59,6 +62,7 @@
   font-weight: 400;
   font-size: var(--main-text-size);
   border: none;
+  cursor: pointer;
 }
 
 .header__theme-menu-list {
@@ -177,7 +181,7 @@
   margin-inline-end: 10px;
   margin-block-start: 50px;
 }
-.gallery_list {
+.gallery-list {
   display: grid;
   gap: 10px;
   padding-left: 0;
@@ -212,8 +216,9 @@
   line-height: 95.7px;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
-.header__theme-menu-button:active {
+.header__theme-menu-button_active {
   outline: 1px solid var(--hover-color, #ff0070);
+  pointer-events: none;
 }
 .header__theme-menu-button:hover {
   outline: 1px solid var(--hover-color, #ff0070);
@@ -273,35 +278,37 @@
     margin-block-start: 162px;
   }
 
-  .header_title {
+  .header-title {
     justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-  .gallery_list_item {
+  .gallery-list-item {
     max-width: 100%;
   }
-  .gallery_list {
+  .gallery-list {
     grid-template-columns: repeat(3, 230px);
     grid-template-rows: 192px 230px 318px;
     gap: 20px;
   }
 
-  .gallery_list_item:first-child,
-  .gallery_list_item:last-child {
+  .gallery-list-item:first-child,
+  .gallery-list-item:last-child {
     grid-column-start: span 2;
   }
 
-  .gallery_list_item:nth-child(2),
-  .gallery_list_item:nth-child(3) {
+  .gallery-list-item:nth-child(2),
+  .gallery-list-item:nth-child(3) {
     grid-row-start: span 2;
   }
   .gallery {
     margin-inline-start: 20px;
     margin-inline-end: 20px;
     min-height: 823px;
+    margin-block-start: 80px;
   }
   .name_of_card_gallery {
     width: 728px;
+    margin-block-end: 20px;
   }
 
   .first-card {
@@ -316,11 +323,25 @@
     grid-template-columns: 236px 472px;
     gap: 20px;
   }
-  .name_of_card {
+  .third-card-text {
+    display: grid;
+    gap: 20px;
+  }
+  .name-of-card {
     margin-block-start: 0;
+  }
+  .name-of-card-third {
+    margin-block-end: 0px;
   }
   .main {
     gap: 80px;
+  }
+  .main_title {
+    max-width: 236px;
+  }
+  .second-card {
+    display: grid;
+    gap: 20px;
   }
 }
 
@@ -341,7 +362,7 @@
     margin-inline-start: 513px;
     margin-block-start: 114px;
   }
-  .header_title {
+  .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     align-self: center;
   }
@@ -358,12 +379,18 @@
   .third-card {
     grid-template-columns: 315px 649px;
   }
-  .name_of_card {
+  .name-of-card {
     width: 100%;
   }
-  .gallery_list {
+  .gallery-list {
     grid-template-columns: repeat(3, 315px);
     grid-template-rows: 260px 315px 428px;
     gap: 25px 19px;
+  }
+  .main_title {
+    max-width: 315px;
+  }
+  .name_of_card_gallery {
+    margin-block-end: 20px;
   }
 }
