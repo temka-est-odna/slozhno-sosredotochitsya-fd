@@ -221,7 +221,7 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 .header__theme-menu-button_active {
-  outline: 1px solid var(--hover-color, #ff0070);
+  outline: 1px solid var(--active-color, #ff0070);
   pointer-events: none;
 }
 .header__theme-menu-button:hover {
