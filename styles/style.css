@@ -166,7 +166,7 @@
   font-size: var(--main-text-size);
   font-weight: 400;
   width: 100%;
-  margin: 0;
+  line-height: 23.4px;
 }
 
 .title-decor {
