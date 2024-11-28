@@ -225,7 +225,7 @@
   pointer-events: none;
 }
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--hover-color, #ff0070);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
