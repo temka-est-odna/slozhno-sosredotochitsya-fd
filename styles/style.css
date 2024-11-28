@@ -175,7 +175,6 @@
 }
 
 .gallery {
-  min-width: 375px;
   min-height: 1400px;
   margin-inline-start: 10px;
   margin-inline-end: 10px;
@@ -252,6 +251,10 @@
 .text-link:focus-visible {
   outline: 1px solid var(--second-color);
 }
+.first-card-title {
+  margin-block-end: 0px;
+}
+
 @media (width>=768px) {
   .header {
     grid-template-rows: 463px 99px 463px;
@@ -340,6 +343,10 @@
     max-width: 236px;
   }
   .second-card {
+    display: grid;
+    gap: 20px;
+  }
+  .text-first-card {
     display: grid;
     gap: 20px;
   }
