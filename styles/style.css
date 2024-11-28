@@ -258,7 +258,9 @@
 .first-card-title {
   margin-block-end: 0px;
 }
-
+.third-card-title {
+  margin-block-end: 0px;
+}
 @media (width>=768px) {
   .header {
     grid-template-rows: 463px 99px 463px;
