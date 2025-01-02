@@ -15,11 +15,11 @@
 
 .header {
   min-width: 375px;
-  min-height: 668px;
-  min-block-size: 100vh;
+  height: 100vh;
+  min-block-size: 668px;
   display: grid;
   position: relative;
-  grid-template-rows: 238px 192px 238px;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .header-title {
@@ -40,18 +40,19 @@
   font-size: var(--main-text-size);
   line-height: 23.4px;
   font-weight: 700;
-  min-width: 355px;
+
   margin-inline-start: 10px;
   margin-inline-end: 10px;
-  margin-block-end: 66px;
-  margin-block-start: 55px;
-  max-height: 117px;
+
+  justify-self: end;
+  align-self: center;
 }
 
 .header__theme-menu {
   justify-self: end;
   margin-inline-end: 10px;
-  margin-block-start: 75px;
+  align-self: center;
+  height: 98px;
 }
 
 .header__theme-menu-button {
@@ -88,23 +89,24 @@
 }
 
 .decorated-zone::before {
-  border-inline-end: 1px solid var(--secondary-color, #ff0070);
-  border-block-start: 1px solid var(--secondary-color, #ff0070);
+  border-inline-end: 1px solid var(--rec-color);
+  border-block-start: 1px solid var(--rec-color);
   justify-self: end;
-  margin-block-start: 10px;
-  margin-inline-end: 10px;
+  top: 10px;
+  right: 10px;
 }
 
 .decorated-zone::after {
-  border-inline-start: 1px solid var(--secondary-color, #ff0070);
-  border-block-end: 1px solid var(--secondary-color, #ff0070);
-  margin-block-end: 10px;
-  margin-inline-start: 10px;
+  border-inline-start: 1px solid var(--rec-color);
+  border-block-end: 1px solid var(--rec-color);
+  bottom: 10px;
+  left: 10px;
   align-self: end;
 }
 .rec-decor {
   position: absolute;
   font-family: var(--main-font);
+  font-family: 400;
   visibility: var(--rec-visibility, visible);
   display: inline-flex;
   align-items: center;
@@ -131,10 +133,9 @@
 
 .main {
   min-width: 375px;
-  min-height: 949px;
   display: grid;
   gap: 50px;
-  margin-block-start: 40px;
+  padding-top: 40px;
 }
 .card {
   margin-inline-start: 10px;
@@ -158,7 +159,6 @@
   font-size: var(--main-text-size);
   font-weight: 700;
   margin-block-start: 20px;
-  margin-block-end: 10px;
 }
 
 .text_in_card {
@@ -168,6 +168,7 @@
   font-weight: 400;
   width: 100%;
   line-height: 23.4px;
+  margin-block-start: 10px;
 }
 
 .title-decor {
@@ -175,12 +176,15 @@
   background: var(--accent-color);
 }
 
-.name_of_last_card {
+.name_of_card_normal_weight {
   font-weight: 400;
 }
-
+.name_of_card_gallery {
+  width: 100%;
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+}
 .gallery {
-  min-height: 1400px;
   margin-inline-start: 10px;
   margin-inline-end: 10px;
   margin-block-start: 50px;
@@ -191,7 +195,7 @@
   padding-left: 0;
 }
 .gallery-list-item {
-  max-width: 355px;
+  line-height: 0;
 }
 
 .gallery-photo {
@@ -204,13 +208,14 @@
 
 .footer {
   min-width: 375px;
-  min-height: 668px;
+
   display: grid;
   position: relative;
   align-content: center;
   justify-content: center;
   margin-block-start: 40px;
-  min-block-size: 100vh;
+  height: 100vh;
+  min-block-size: 668px;
 }
 .footer-title {
   font-family: var(--main-font);
@@ -235,13 +240,11 @@
   border-block-end: 1px solid var(--hover-color, #ff0070);
   outline: none;
 }
-.first-card {
+.card-why {
   display: grid;
-  grid-template-columns: 1;
 }
-.third-card {
+.card-how {
   display: grid;
-  grid-template-columns: 1;
 }
 .text-link {
   text-shadow: 2px 2px 0 var(--shadow-link-color);
@@ -256,36 +259,31 @@
 .text-link:focus-visible {
   outline: 1px solid var(--second-color);
 }
-.first-card-title {
-  margin-block-end: 0px;
-}
-.third-card-title {
+.title_without_padding {
   margin-block-end: 0px;
 }
 @media (width>=768px) {
-  .header {
-    grid-template-rows: 463px 99px 463px;
-  }
   .rec-decor {
     inset-inline-end: 29px;
     inset-block-start: 20px;
   }
   .decorated-zone::before {
-    margin-block-start: 20px;
-    margin-inline-end: 20px;
+    top: 20px;
+    right: 20px;
   }
+
   .decorated-zone::after {
-    margin-block-end: 20px;
-    margin-inline-start: 20px;
+    bottom: 20px;
+    left: 20px;
   }
+
   .header__theme-menu {
     margin-inline-end: 20px;
-    margin-block-start: 192px;
   }
+
   .header-text {
     margin-inline-end: 20px;
     margin-inline-start: 384px;
-    margin-block-start: 162px;
   }
 
   .header-title {
@@ -293,11 +291,11 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .gallery-list-item {
-    max-width: 100%;
+    min-width: 230px;
   }
   .gallery-list {
-    grid-template-columns: repeat(3, 230px);
-    grid-template-rows: 192px 230px 318px;
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
   }
 
@@ -313,35 +311,32 @@
   .gallery {
     margin-inline-start: 20px;
     margin-inline-end: 20px;
-    min-height: 823px;
+
     margin-block-start: 80px;
   }
   .name_of_card_gallery {
-    width: 728px;
+    width: 100%;
     margin-block-end: 20px;
   }
 
-  .first-card {
-    grid-template-columns: 236px 472px;
+  .card-why {
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
   .card {
     margin-inline-start: 20px;
     margin-inline-end: 20px;
   }
-  .third-card {
-    grid-template-columns: 236px 472px;
+  .card-how {
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
-  .third-card-text {
+  .text-card-how {
     display: grid;
     gap: 20px;
   }
   .name-of-card {
     margin-block-start: 0;
-  }
-  .name-of-card-third {
-    margin-block-end: 0px;
   }
   .main {
     gap: 80px;
@@ -350,11 +345,11 @@
   .main_title {
     max-width: 236px;
   }
-  .second-card {
+  .card-what {
     display: grid;
     gap: 20px;
   }
-  .text-first-card {
+  .text-card-why {
     display: grid;
     gap: 20px;
   }
@@ -372,37 +367,26 @@
   .header__theme-menu-item {
     justify-self: center;
   }
-  .header {
-    grid-template-rows: 319px 130px 319px;
-  }
   .header-text {
-    height: 71px;
     margin-inline-start: 513px;
-    margin-block-start: 114px;
   }
   .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     align-self: center;
   }
 
-  .first-card {
-    grid-template-columns: 314.96px 648.92px;
+  .card-why {
+    grid-template-columns: 1fr 2.06fr;
   }
 
-  .second-card {
-    display: grid;
-    grid-template-columns: repeat(3, 315px);
-    gap: 20px;
+  .card-what {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .third-card {
-    grid-template-columns: 315px 649px;
-  }
+
   .name-of-card {
     width: 100%;
   }
   .gallery-list {
-    grid-template-columns: repeat(3, 315px);
-    grid-template-rows: 260px 315px 428px;
     gap: 25px 19px;
   }
   .main_title {

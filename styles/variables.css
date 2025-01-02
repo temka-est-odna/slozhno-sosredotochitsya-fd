@@ -5,17 +5,18 @@
 
 :root {
   --accent-color: #ff0070;
-  --hover-color:rgba(255, 0, 112, 0.4);
-  --active-color:#ff0070;
-  --shadow-color:#ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --active-color: #ff0070;
+  --shadow-color: #ff0070;
   --background-cover-image: url(../images/cover-image-dark.png);
-  --title-color:#DB00FF;
-  --main-color:#000028;
-  --main-font:'IBM Plex Mono', sans-serif;
-  --main-text-size:18px;
-  --second-color:#F1B2CE;
-  --shadow-link-color:#FF0070;
-  --main-title-color:#ff0070;
-  --rec-visibility:visible;
-  --header-button-color:#ff0070;
+  --title-color: #db00ff;
+  --main-color: #000028;
+  --main-font: "IBM Plex Mono", sans-serif;
+  --main-text-size: 18px;
+  --second-color: #f1b2ce;
+  --shadow-link-color: #ff0070;
+  --main-title-color: #ff0070;
+  --rec-visibility: visible;
+  --header-button-color: #ff0070;
+  --rec-color: #ff0070;
 }
