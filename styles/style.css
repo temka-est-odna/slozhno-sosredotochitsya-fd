@@ -106,7 +106,7 @@
 .rec-decor {
   position: absolute;
   font-family: var(--main-font);
-  font-family: 400;
+  font-weight: 400;
   visibility: var(--rec-visibility, visible);
   display: inline-flex;
   align-items: center;
@@ -135,7 +135,7 @@
   min-width: 375px;
   display: grid;
   gap: 50px;
-  padding-top: 40px;
+  margin-block-start: 40px;
 }
 .card {
   margin-inline-start: 10px;
@@ -295,7 +295,6 @@
   }
   .gallery-list {
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
   }
 
