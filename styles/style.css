@@ -11,6 +11,7 @@
   background-size: cover;
   background-attachment: fixed;
   overflow: auto;
+  background-color: var(--background-color);
 }
 
 .header {
@@ -31,6 +32,7 @@
   text-shadow: 4px 4px 0 var(--shadow-color);
   justify-self: start;
   align-self: center;
+  margin-inline-start: 10px;
 }
 
 .header-text {
@@ -43,7 +45,7 @@
 
   margin-inline-start: 10px;
   margin-inline-end: 10px;
-
+  margin-block-end: 11px;
   justify-self: end;
   align-self: center;
 }
@@ -52,7 +54,7 @@
   justify-self: end;
   margin-inline-end: 10px;
   align-self: center;
-  height: 98px;
+  margin-block-start: 7px;
 }
 
 .header__theme-menu-button {
@@ -119,6 +121,7 @@
   content: "REC";
   color: var(--accent-color, #ff0070);
   line-height: 24px;
+  font-size: var(--main-text-size);
 }
 
 .rec-decor::after {
@@ -187,7 +190,6 @@
 .gallery {
   margin-inline-start: 10px;
   margin-inline-end: 10px;
-  margin-block-start: 50px;
 }
 .gallery-list {
   display: grid;
@@ -219,7 +221,7 @@
 .footer-title {
   font-family: var(--main-font);
   font-weight: 700;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   line-height: 95.7px;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -236,7 +238,7 @@
   outline: none;
 }
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--hover-color, #ff0070);
+  border-block-end: 1px solid var(--focus-color);
   outline: none;
 }
 .card-why {
@@ -278,20 +280,21 @@
 
   .header__theme-menu {
     margin-inline-end: 20px;
+    margin-block-start: 21px;
   }
 
   .header-text {
     margin-inline-end: 20px;
     margin-inline-start: 384px;
+    margin-block-end: 15px;
   }
 
   .header-title {
     justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: 0px;
   }
-  .gallery-list-item {
-    min-width: 230px;
-  }
+
   .gallery-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -309,8 +312,6 @@
   .gallery {
     margin-inline-start: 20px;
     margin-inline-end: 20px;
-
-    margin-block-start: 80px;
   }
   .name_of_card_gallery {
     width: 100%;
@@ -351,6 +352,12 @@
     display: grid;
     gap: 20px;
   }
+  .footer {
+    margin-block-start: 60px;
+  }
+  .footer-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 
 @media (width>=1024px) {
@@ -358,6 +365,7 @@
     justify-self: center;
     align-self: start;
     margin-block-start: 20px;
+    margin-inline-end: 0px;
   }
   .header__theme-menu-list {
     grid-template-columns: repeat(3, 70px);
@@ -367,6 +375,8 @@
   }
   .header-text {
     margin-inline-start: 513px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
   }
   .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -380,12 +390,11 @@
   .card-what {
     grid-template-columns: repeat(3, 1fr);
   }
-
+  .card-how {
+    grid-template-columns: 1fr 2.06fr;
+  }
   .name-of-card {
     width: 100%;
-  }
-  .gallery-list {
-    gap: 25px 19px;
   }
   .main_title {
     max-width: 315px;

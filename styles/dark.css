@@ -4,7 +4,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff0070;
-  --hover-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
   --active-color: #ff0070;
   --shadow-color: #ff0070;
   --background-cover-image: url(../images/cover-image-dark.png);
@@ -18,4 +18,6 @@
   --rec-visibility: visible;
   --header-button-color: #ff0070;
   --rec-color: #ff0070;
+  --focus-color: #ff0070;
+  --background-color: #000028;
 }
